@@ -1,17 +1,16 @@
-import {Provider, useDispatch} from "react-redux";
-import Store from "./redux/store";
+import { useDispatch } from "react-redux";
 
 function App() {
   const dispatch = useDispatch();
   const product = {
-    name: 'i Phone',
-    category: 'mobile',
+    name: "i Phone",
+    category: "mobile",
     price: 10000,
-    color: 'red'
-  }
- return <Provider store={Store}>
-    <button onClick={()=>dispatch(product)}>test</button>
-</Provider>
+    color: "red",
+  };
+  return (
+        <button onClick={() => dispatch(product)}>test</button>
+  );
 }
 
 export default App;
